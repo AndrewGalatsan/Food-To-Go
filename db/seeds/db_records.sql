@@ -12,12 +12,17 @@ INSERT INTO menu_items (name, thumbnail_url, price, description, category)
           ('Cream Cheese Bagel', 'https://github.com/AndrewGalatsan/Food-To-Go/blob/master/public/images/bagel.png?raw=true', 499, 'Breakfast bagel with creamcheese.', 'breakfast'),
           ('Bowl of fruit', 'https://github.com/AndrewGalatsan/Food-To-Go/blob/master/public/images/fruit.png?raw=true', 499, 'Bowl of fruit', 'breakfast');
 
-INSERT INTO orders (name, phone, customer_notes)
-  VALUES ('Bob', '6478805234', 'extra cream cheese'),
-  ('John', '6478805276', 'extra steamed'),
-  ('Mike', '4168805222', 'no ceasar sauce');
+INSERT INTO users (name, phone, customer_notes)
+  VALUES ('Bob', '6478805234'),
+  ('John', '6478805276'),
+  ('Mike', '4168805222');
 
 INSERT INTO ordered_items (order_id, menu_item_id, menu_item_name, qty)
   VALUES (1, 11, 'Cream Cheese Bagel', 2),
           (2, 4,'Black Tea', 2),
           (3, 10, 'Ceasar Salad', 1);
+
+INSERT INTO food_orders (user_id, created_at, updated_at, completed_at, customer_notes)
+  VALUES (1, 13:00, 13:15, 13:30, 'extra cream cheese'),
+          (2, 12:00, 12:15, 12:30), 'let the tea steam longer please',
+          (3, 14:00, 14:20, 14:40, 'no ceasar sauce');
