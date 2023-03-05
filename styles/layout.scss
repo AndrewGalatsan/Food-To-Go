@@ -3,4 +3,29 @@
 body,
 html {
   margin: 0;
+  box-sizing: border-box;
 }
+
+header {
+width: auto;
+color: red;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
+
+.nav-logo{
+  width: 5%;
+};
+
+.reviews{
+  height: 50vh;
+}
+
+.about{
+  height: 50vh;
+}
+
+
+
+
