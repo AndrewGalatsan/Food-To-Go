@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,500;0,600;1,500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Mr+Dafoe&family=Nunito:ital,wght@0,500;0,600;1,500&display=swap"
       rel="stylesheet"
     />
 
@@ -31,10 +31,10 @@
         <h3>Family Owned</h3>
       </div>
       <section class="main">
-        <h1>TITLE</h1>
+        <h1 class="title">LOREM</h1>
 
         <div class="main-buttons">
-          <form action=""><button>ORDER NOW</button></form>
+          <form action="#order-page"><button>ORDER NOW</button></form>
 
           <form action="#menu-page"><button>SEE MENU</button></form>
         </div>
@@ -59,13 +59,14 @@
             <h4 class="menu-item-title">Pepperoni Pizza</h4>
             <img
               class="menu-item-image"
+              id="pepperoni-img"
               src="/images/peparoni_pizza.png"
               alt=""
             />
           </div>
           <p class="menu-item-description">
-            Our tasty, delicious, signature burger. Made with our signature 6 OZ
-            patty, lettuce, tomatoes, cheese, and our house sauce.
+            Pepporoni Pizza, made with fresh tomato sauce, mozzorella cheese,
+            Pepperoni. 8-10 slices.
           </p>
         </div>
         <div class="menu-item">
@@ -74,8 +75,8 @@
             <img class="menu-item-image" src="/images/poutine.png" alt="" />
           </div>
           <p class="menu-item-description">
-            Our tasty, delicious, signature burger. Made with our signature 6 OZ
-            patty, lettuce, tomatoes, cheese, and our house sauce.
+            Canadian style poutine. Fresh cut french fries topped with cheese
+            cruds and gravy.
           </p>
         </div>
       </div>
@@ -87,8 +88,8 @@
           </div>
 
           <p class="menu-item-description">
-            Our tasty, delicious, signature burger. Made with our signature 6 OZ
-            patty, lettuce, tomatoes, cheese, and our house sauce.
+            The Classic Perogie. Made with cheddar cheese, fresh cut potatoes.
+            Pan fried to perfection.
           </p>
         </div>
         <div class="menu-item">
@@ -97,8 +98,8 @@
             <img class="menu-item-image" src="/images/greek_salad.png" alt="" />
           </div>
           <p class="menu-item-description">
-            Our tasty, delicious, signature burger. Made with our signature 6 OZ
-            patty, lettuce, tomatoes, cheese, and our house sauce.
+            Served with tomatoes, sliced cucumbers, onions, feta cheese, fresh
+            bell peppers and olives. Topped off with olive oil and goat cheese.
           </p>
         </div>
         <div class="menu-item">
@@ -107,8 +108,8 @@
             <img class="menu-item-image" src="/images/salad.png" alt="" />
           </div>
           <p class="menu-item-description">
-            Our tasty, delicious, signature burger. Made with our signature 6 OZ
-            patty, lettuce, tomatoes, cheese, and our house sauce.
+            Our signature house salad. Made with fresh romaine and green leaf
+            lettuce, onions, croutons and our signature dressing.
           </p>
         </div>
       </div>
@@ -120,8 +121,8 @@
           </div>
 
           <p class="menu-item-description">
-            Our tasty, delicious, signature burger. Made with our signature 6 OZ
-            patty, lettuce, tomatoes, cheese, and our house sauce.
+            Our in house Lemon cake. Soft, double layered, with lemon filling
+            and buttercream top.
           </p>
         </div>
         <div class="menu-item">
@@ -131,7 +132,7 @@
           </div>
           <p class="menu-item-description">
             Our tasty, delicious, signature burger. Made with our signature 6 OZ
-            patty, lettuce, tomatoes, cheese, and our house sauce.
+            patty, lettuce, tomatoes, cheese, and our house sauce
           </p>
         </div>
         <div class="menu-item">
@@ -140,8 +141,8 @@
             <img class="menu-item-image" src="/images/fruit.png" alt="" />
           </div>
           <p class="menu-item-description">
-            Our tasty, delicious, signature burger. Made with our signature 6 OZ
-            patty, lettuce, tomatoes, cheese, and our house sauce.
+            Our fruit salad. Fresh strawberries, blueberries, pineapple, grapes,
+            and melons.
           </p>
         </div>
       </div>
@@ -153,8 +154,7 @@
           </div>
 
           <p class="menu-item-description">
-            Our tasty, delicious, signature burger. Made with our signature 6 OZ
-            patty, lettuce, tomatoes, cheese, and our house sauce.
+            In house bagel, with everything on it. Served with cream cheese.
           </p>
         </div>
         <div class="menu-item">
@@ -167,8 +167,7 @@
             />
           </div>
           <p class="menu-item-description">
-            Our tasty, delicious, signature burger. Made with our signature 6 OZ
-            patty, lettuce, tomatoes, cheese, and our house sauce.
+            Black coffee, made from freshly grounded aribica coffe beans.
           </p>
         </div>
         <div class="menu-item">
@@ -177,41 +176,148 @@
             <img class="menu-item-image" src="/images/tea.png" alt="" />
           </div>
           <p class="menu-item-description">
-            Our tasty, delicious, signature burger. Made with our signature 6 OZ
-            patty, lettuce, tomatoes, cheese, and our house sauce.
+            Black green tea. Made from fresh and dried green leaves.
           </p>
         </div>
       </div>
     </section>
+    <!-- ORDER PAGE -->
 
+    <div id="order-page">
+      <h1>ORDER HERE</h1>
+    </div>
     <section class="order-menu">
-      <label class="item-label">
-        <input
-          type="radio"
-          name="cheeseburger"
-          value="one_value"
-        />
-        <div>Cheeseburger</div>
-      </label>
-      <label class="item-label">
-        <input type="radio" name="poutine"  />
-        <div>Poutine</div>
-      </label>
-    </section>
+      <!-- First item, each "item-label" class is a single food item-->
 
-    <section class="promo">
-      <div class="about">
-        <p>
-          We are Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          Corporis quae, adipisci minus possimus officia expedita modi. Id ab ut
-          culpa, soluta dolor optio ullam explicabo minus possimus provident
-          harum perferendis nostrum sapiente quia ipsum eaque eos sunt qui rerum
-          cum quae, sit dicta illum necessitatibus. Odit ducimus laboriosam
-          ratione doloribus?
-        </p>
-      </div>
+      <label class="item-label">
+        <!-- Cheeseburger -->
+        <input type="checkbox" name="order-name" value="one_value" />
+        <div>
+          <h2>Cheeseburger</h2>
+          <p>
+            Our signature burger. Made with our signature 6 OZ patty, lettuce,
+            tomatoes, cheese, and our house sauce.
+          </p>
+        </div>
+      </label>
+      <label class="item-label">
+        <!-- Poutine selection -->
+        <input type="checkbox" name="order-name" />
+        <div>
+          <h2>Poutine</h2>
+          <p>
+            Our signature burger. Made with our signature 6 OZ patty, lettuce,
+            tomatoes, cheese, and our house sauce.
+          </p>
+        </div>
+      </label>
+      <label class="item-label">
+        <!-- Pepperoni Pizza-->
+        <input type="checkbox" name="order-name" value="one_value" />
+        <div>
+          <h2>Pepperoni Pizza</h2>
+          <p>
+            Pepporoni Pizza, made with fresh tomato sauce, mozzorella cheese,
+            Pepperoni. 8-10 slices.
+          </p>
+        </div>
+      </label>
+      <label class="item-label">
+        <input type="checkbox" name="order-name" />
+        <div>
+          <h2>Perogies</h2>
+          <p>
+            The Classic Perogie. Made with cheddar cheese, fresh cut potatoes.
+            Pan fried to perfection.
+          </p>
+        </div>
+      </label>
+      <label class="item-label">
+        <input type="checkbox" name="order-name" />
+        <div>
+          <h2>Greek Salad</h2>
+          <p>
+            Our signature house salad. Made with fresh romaine and green leaf
+            lettuce, onions, croutons and our signature dressing.
+          </p>
+        </div>
+      </label>
+      <label class="item-label">
+        <input type="checkbox" name="order-name" />
+        <div>
+          <h2>House Salad</h2>
+          <p>
+            Our signature house salad. Made with fresh romaine and green leaf
+            lettuce, onions, croutons and our signature dressing.
+          </p>
+        </div>
+      </label>
+      <label class="item-label">
+        <input type="checkbox" name="order-name" />
+        <div>
+          <h2>Lemon Cake</h2>
+          <p>
+            Our in house Lemon cake. Soft, double layered, with lemon filling
+            and buttercream top.
+          </p>
+        </div>
+      </label>
+      <label class="item-label">
+        <input type="checkbox" name="order-name" />
+        <div>
+          <h2>Cheesecake</h2>
+          <p>
+            Our tasty, delicious, signature burger. Made with our signature 6 OZ
+            patty, lettuce, tomatoes, cheese, and our house sauce
+          </p>
+        </div>
+      </label>
+      <label class="item-label">
+        <input type="checkbox" name="order-name" />
+        <div>
+          <h2>Fruits</h2>
+          <p>
+            Our fruit salad. Fresh strawberries, blueberries, pineapple, grapes,
+            and melons.
+          </p>
+        </div>
+      </label>
+      <label class="item-label">
+        <input type="checkbox" name="order-name" />
+        <div>
+          <h2>Bagel and Creamcheese</h2>
+          <p>
+            In house bagel, with everything on it. Served with cream cheese.
+          </p>
+        </div>
+      </label>
+      <label class="item-label">
+        <input type="checkbox" name="order-name" />
+        <div>
+          <h2>Black Coffee</h2>
+          <p>Black coffee, made from freshly grounded aribica coffe beans.</p>
+        </div>
+      </label>
+      <label class="item-label">
+        <input type="checkbox" name="order-name" />
+        <div>
+          <h2>Tea</h2>
+          <p>Black green tea. Made from fresh and dried green leaves.</p>
+        </div>
+      </label>
     </section>
-    <h1>Have fun! 🥔</h1>
-    <img src="" alt="" />
+    <div class="order-button">
+      <button name="order-name">Submit Order</button>
+    </div>
+
+    <footer class="promo">
+      <div class="about">
+        <img class="about-img" src="/images/logo.png" alt="" />
+        <div class="about-snippet">
+          <p>We are Lorem a family owned restaurant.</p>
+          <h2>Contact Us: 416-555-5555</h2>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
