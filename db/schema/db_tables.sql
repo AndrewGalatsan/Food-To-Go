@@ -15,18 +15,29 @@ CREATE TABLE menu_items (
   category VARCHAR (255) NOT NULl
 );
 
-CREATE TABLE orders (
+CREATE TABLE users (
   id SERIAL PRIMARY KEY NOT NULL,
   name VARCHAR(255) NOT NULL,
   phone VARCHAR(255) NOT NULL,
-  customer_notes TEXT NOT NULL
 );
 
 DROP TABLE IF EXISTS ordered_items CASCADE;
 CREATE TABLE ordered_items (
   id SERIAL PRIMARY KEY NOT NULL,
-  order_id INTEGER REFERENCES orders(id) ON DELETE CASCADE,
+  order_id INTEGER REFERENCES food_orders(id) ON DELETE CASCADE,
   menu_item_id INTEGER REFERENCES menu_items(id),
-  menu_item_name VARCHAR (255) NOT NULL,
   qty INTEGER NOT NULL
 );
+
+CREATE TABLE food_orders (
+  id SERIAL PRIMARY KEY NOT NULL,
+  user_id INTEGER REFERENCES users(id) ON DELETE CASCADE NOT NULL,
+  created_at TIMESTAMP DEFAULT NOW(),
+  updated_at TIMESTAMP,
+  completed_at TIMESTAMP,
+  customer_notes TEXT,
+  status BOOLEAN NOT NULL DEFAULT FALSE );
+
+
+
+// ordereditems will be linked to food_orders users table will be linked to food_orders
