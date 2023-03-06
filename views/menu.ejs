@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
+    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+  </head>
+
+  <body>
+    <%- include('partials/_header') %>
+    <div class="menu">
+
+      <div class="col-md-4 mb-5">
+        <div class="card-body row">
+
+          <h1>Mains</h1>
+          <section id="menu_item_mains">
+          </section>
+
+          <h1>Desserts</h1>
+          <section id="menu_item_desserts">
+          </section>
+
+          <h1>Breakfast</h1>
+          <section id="menu_item_breakfast">
+          </section>
+
+        <script type="text/javascript" src="/scripts/menuScript.js"></script>
+      </div>
+
+      <%- include('partials/_footer') %>
+    </div>
+
+  </body>
+</html>

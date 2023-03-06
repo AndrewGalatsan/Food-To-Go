@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Order Confirmation</title>
+    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+    <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
+  </head>
+
+  <body>
+    <%- include('partials/_header') %>
+    <div class="container">
+      <article class="card">
+        <header class="card-header"> <strong>Your order is placed! You will shortly receive a text at <%= customerInfo.phone %> message with the pick-up time.</strong></header>
+        <div class="card-body">
+          <article class="card">
+            <div class="card-body column">
+              <div class="col"> <strong><%= customerInfo.name %>'s order contains: </strong></div>
+            </div>
+          </article>
+          <hr>
+          <ul class="column">
+            <% for (let item in confirmedItems) { %>
+              <% if (confirmedItems[item].qty > 0) { %>
+              <li class="col-md-4">
+                <figure class="itemside mb-3">
+                  <div class="aside"><img src="<%= confirmedItems[item].image %>" class="img-sm border"></div>
+                  <figcaption class="info align-self-center">
+                    <p class="title"><%= item %><br> qty: <%= confirmedItems[item].qty %></p>
+                  </figcaption>
+                </figure>
+              </li>
+              <%} %>
+            <% } %>
+            <p><strong>Customer Notes:</strong> <%= customerInfo.notes %></p>
+          </ul>
+          <hr>
+          <article class="card">
+            <div class="card-body column">
+              <div class="col">Subtotal: $<%= prices.subTotPrice %><br><strong>Total:$<%= prices.totPrice %></strong> </div>
+            </div>
+          </article>
+        </div>
+      </article>
+    </div>
+  </body>
+</html>

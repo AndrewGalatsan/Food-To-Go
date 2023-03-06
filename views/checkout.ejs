@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Shopping Bag</title>
+    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+    <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
+  </head>
+
+  <body>
+    <!-- <h1>Order Page</h1> -->
+    <%- include('partials/_header') %>
+
+    <div class="container">
+      <article class="card">
+        <header class="card-header"> <strong> Thank you for choosing us today!</strong></header>
+        <div class="card-body">
+          <article class="card">
+            <div class="card-body row">
+              <div class="col"> <strong>Pick up:</strong> <br> Order @613 Bay St. | <i class="fa fa-phone"></i> +16477652856 </div>
+            </div>
+          </article>
+          <hr>
+            <ul class="row">
+              <section id="items_selected">
+              </section>
+              </ul>
+            <hr>
+            <article class="card">
+              <div class="card-body column">
+                <div  class="col">
+                  <p>Subtotal:</p>
+                  <p id="subtotalprice"></p>
+                  <p><strong>Total:</strong></p>
+                  <p id="totalprice"></p>
+                </div>
+              </div>
+            </article>
+            <hr>
+            <div class="error">
+            </div>
+          <form id="form">
+            <div class="form-group mb-2">
+              <label for="pickUpName">Name: </label>
+              <input type="text" class="user-name" id="pickUpName" name="pickUpName" class="form-control" id="formGroupExampleInput" placeholder="name" style="width: 250px; margin: 1em">
+              <label for="phone">Phone: </label>
+              <input class="user-info" type="tel" name="phone" id="phone" class="form-control" id="formGroupExampleInput2" placeholder="987-654-3210" style="width: 250px; margin: 1em">
+            </div>
+            <div class="form-group">
+              <label for="customerNotes">Customer Notes:</label>
+              <textarea name="customerNotes" id="customerNotes" class="form-control"></textarea>
+            </div>
+          </form>
+          <input type="hidden" name="orderDetails" class="form-order-details" value='{}'></input>
+          <hr>
+          <a href="/menu"class="btn btn-warning" data-abc="true"> <i class="fa fa-chevron-left"></i> Back to Menu</a>
+
+          <a href="/confirmation" class="btn btn-warning" id="place-order" data-abc="true"> <i class="fa fa-chevron-right"></i> Place Order</a>
+        </div>
+      </article>
+    </div>
+    <script type="text/javascript" src="/scripts/checkoutScript.js"></script>
+  </body>
+</html>
