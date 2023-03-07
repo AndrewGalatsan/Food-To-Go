@@ -1,7 +1,7 @@
 const express = require('express');
 const router  = express.Router();
 
-module.exports = (db) => {
+
 
   const menuItems = {};
 
@@ -28,5 +28,6 @@ module.exports = (db) => {
     res.json({ menuItems })
   })
 
-  return router;
-};
+ 
+
+module.exports = router;
