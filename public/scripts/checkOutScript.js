@@ -103,7 +103,7 @@ $(() => {
       $("#place-order").click(function (event) {
         event.preventDefault();
         let customerName = $('#pickUpName').val()
-        let customerPhone = Number($('#phone').val())
+        let customerPhone = $('#phone').val()
         let customerNotes = $('#customerNotes').val()
         if ($('#pickUpName').val().length === 0  || $('#phone').val().length == 0) {
           alert("Please fill out Name and Phone number.")
