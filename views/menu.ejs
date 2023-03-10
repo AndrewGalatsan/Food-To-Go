@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Order Page</title>
+    <title>Order Menu</title>
 
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -19,132 +19,14 @@
     <link rel="stylesheet" href="/styles/main.css" />
     <link rel="stylesheet" href="/styles/layout.css" />
 
-    <script src="/vendor/jquery-3.0.0.js"></script>
-    <script defer src="/scripts/app.js"></script>
+    <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
+
   </head>
 
   <body>
-    <!-- <%- include('partials/_header') %> -->
-    <div id="order-page">
-      <h1>PLACE ORDER HERE</h1>
-    </div>
-    <section class="order-menu">
-      <!-- First item, each "item-label" class is a single food item-->
+                <%- include('partials/_header') %>
 
-      <label class="item-label">
-        <!-- Cheeseburger -->
-        <input type="checkbox" name="order-name" value="one_value" />
-        <div>
-          <h2>Cheeseburger</h2>
-          <p>
-            Made with our signature 6 OZ patty, lettuce, tomatoes, cheese, and
-            our house sauce.
-          </p>
-          <p class="price">$12.99</p>
-
-          <div class="counter">
-            <div class="counter-btn count-plus">+</div>
-            <div class="”counter-num”">0</div>
-            <div class="counter-btn count-minus">-</div>
-          </div>
-        </div>
-      </label>
-      <label class="item-label">
-        <!-- Poutine selection -->
-        <input type="checkbox" name="order-name" />
-        <div>
-          <h2>Poutine</h2>
-          <p>
-            Canadian style poutine. Fresh cut french fries topped with cheese
-            cruds and gravy.
-          </p>
-          <p class="price">$8.99</p>
-
-          <div class="counter">
-            <div class="counter-btn count-plus">+</div>
-            <div class="”counter-num”">0</div>
-            <div class="counter-btn count-minus">-</div>
-          </div>
-        </div>
-      </label>
-      <label class="item-label">
-        <!-- Pepperoni Pizza-->
-        <input type="checkbox" name="order-name" value="one_value" />
-        <div>
-          <h2>Pepperoni Pizza</h2>
-          <p>
-            Pepporoni Pizza, made with fresh tomato sauce, mozzorella cheese,
-            Pepperoni. 8-10 slices.
-          </p>
-          <p class="price">$5.99</p>
-
-          <div class="counter">
-            <div class="counter-btn count-plus">+</div>
-            <div class="”counter-num”">0</div>
-            <div class="counter-btn count-minus">-</div>
-          </div>
-        </div>
-      </label>
-      <label class="item-label">
-        <input type="checkbox" name="order-name" />
-        <div>
-          <h2>Perogies</h2>
-          <p>
-            Made with cheddar cheese, fresh cut potatoes. Pan fried to
-            perfection.
-          </p>
-          <p class="price">$10.99</p>
-
-          <div class="counter">
-            <div class="counter-btn count-plus">+</div>
-            <div class="”counter-num”">0</div>
-            <div class="counter-btn count-minus">-</div>
-          </div>
-        </div>
-      </label>
-      <label class="item-label">
-        <input type="checkbox" name="order-name" />
-        <div>
-          <h2>Greek Salad</h2>
-          <p>
-            Fresh romaine and green leaf lettuce, onions, croutons and our
-            signature dressing.
-          </p>
-          <p class="price">$7.99</p>
-
-          <div class="counter">
-            <div class="counter-btn count-plus">+</div>
-            <div class="”counter-num”">0</div>
-            <div class="counter-btn count-minus">-</div>
-          </div>
-        </div>
-      </label>
-      <label class="item-label">
-        <input type="checkbox" name="order-name" />
-        <div>
-          <h2>House Salad</h2>
-          <p>
-            Fresh romaine and green leaf lettuce, onions, croutons and our
-            signature dressing.
-          </p>
-          <p class="price">$6.99</p>
-
-          <div class="counter">
-            <div class="counter-btn count-plus">+</div>
-            <div class="”counter-num”">0</div>
-            <div class="counter-btn count-minus">-</div>
-          </div>
-        </div>
-      </label>
-      <label class="item-label">
-        <input type="checkbox" name="order-name" />
-        <div>
-          <h2>Lemon Cake</h2>
-          <p>
-            In house Lemon cake. Soft, double layered, with lemon filling and
-            buttercream top.
-          </p>
-          <p class="price">$5.99</p>
+    <div class="menu menu-order">
 
           <div class="counter">
             <div class="counter-btn count-plus">+</div>
@@ -163,79 +45,24 @@
           </p>
           <p class="price">$5.99</p>
 
-          <div class="counter">
-            <div class="counter-btn count-plus">+</div>
-            <div class="”counter-num”"></div>
-            <div class="counter-btn count-minus">-</div>
-          </div>
-        </div>
-      </label>
-      <label class="item-label">
-        <input type="checkbox" name="order-name" />
-        <div>
-          <h2>Fruits</h2>
-          <p>
-            Our fruit salad. Fresh strawberries, blueberries, pineapple, grapes,
-            and melons.
-          </p>
-          <p class="price">$5.99</p>
+          <h1 class="menu-type main-type">MAINS</h1>
+          <section id="menu_item_main">
+          </section>
 
-          <div class="counter">
-            <div class="counter-btn count-plus">+</div>
-            <div class="”counter-num”">0</div>
-            <div class="counter-btn count-minus">-</div>
-          </div>
-        </div>
-      </label>
-      <label class="item-label">
-        <input type="checkbox" name="order-name" />
-        <div>
-          <h2>Bagel and Creamcheese</h2>
-          <p>
-            In house bagel, with everything on it. Served with cream cheese.
-          </p>
-          <p class="price">$4.99</p>
+          <h1 class="menu-type">DESSERTS</h1>
+          <section id="menu_item_desserts">
+          </section>
 
-          <div class="counter">
-            <div class="counter-btn count-plus">+</div>
-            <div class="”counter-num”">0</div>
-            <div class="counter-btn count-minus">-</div>
-          </div>
-        </div>
-      </label>
-      <label class="item-label">
-        <input type="checkbox" name="order-name" />
-        <div>
-          <h2>Black Coffee</h2>
-          <p>Black coffee, made from freshly grounded aribica coffe beans.</p>
-          <p class="price">$2.99</p>
+          <h1 class="menu-type">BREAKFAST</h1>
+          <section id="menu_item_breakfast">
+          </section>
 
-          <div class="counter">
-            <div class="counter-btn count-plus">+</div>
-            <div class="”counter-num”">0</div>
-            <div class="counter-btn count-minus">-</div>
-          </div>
-        </div>
-      </label>
-      <label class="item-label">
-        <input type="checkbox" name="order-name" />
-        <div>
-          <h2>Green Tea</h2>
-          <p>Black green tea. Made from fresh and dried green leaves.</p>
-          <p class="price">$2.99</p>
+        <script type="text/javascript" src="/scripts/menuScript.js"></script>
+      </div>
+       <form class="checkout-form" action="/checkout">
+   <button class="checkout-btn">CHECKOUT</button> </form>
 
-          <div class="counter">
-            <div class="counter-btn count-plus">+</div>
-            <div class="”counter-num”">0</div>
-            <div class="counter-btn count-minus">-</div>
-          </div>
-        </div>
-      </label>
-    </section>
-    <div class="order-button">
-      <form method="" action="">
-        <button name="order-name" href="/checkout">ADD TO CART</button>
-      </form>
+
     </div>
 
     <!-- <%- include('partials/_footer') %> -->
