@@ -21,7 +21,7 @@
 
 body{
   box-sizing: border-box;
-  
+
   color: var(--font-color-secondary)
 }
 
@@ -45,7 +45,7 @@ header > form {
 
 
 
-.container { 
+.container {
   display: flex;
   flex-direction: columns;
   justify-content: center;
@@ -56,18 +56,39 @@ header > form {
 
 /* header element */
 
+.checkout-container{
+  width:55%;
+}
 .card-header {
   text-align: center;
   justify-content: center;
   align-items: center;
- 
+
 }
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 10px;
+
+}
+
+.col-md-4{
+  border-bottom: 3px solid var(--background-theme-color);
+  width:60%;
+}
+
+li {
+  list-style: none
+}
+
+
 .card-upper{
   background-color: var(--background-theme-color);
-  margin-top:10%;
+  margin-top:25%;
 }
 .card-upper > p {
- 
+
   background-color: var(--background-theme-color);
   font-size: var(--font-size-paragraph);
   color: var(--font-color-secondary);
@@ -78,7 +99,7 @@ header > form {
   padding:2%;
   border-radius: 5px;;
   width: 100%;
-  background-color: var(--background-theme-color-2); 
+  background-color: var(--background-theme-color-2);
   font-size: var(--font-size-button);
 }
 
@@ -89,9 +110,14 @@ header > form {
   padding:1%;
   margin-left:15%;
   border: 1px solid var(--background-theme-tertiary-color );
-  border-radius:2px;  
-  margin-top:10%;  
-}   
+  border-radius:2px;
+  margin-top:10%;
+}
+
+.img-sm{
+  width: 300px;
+  border:5px solid var(--background-theme-color)
+}
 
 
 // .card-upper{

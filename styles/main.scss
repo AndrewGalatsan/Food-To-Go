@@ -3,6 +3,7 @@
 --background-theme-color: rgb(6, 4, 10);
 --background-theme-color-2:rgb(29, 28, 31);
 --background-theme-secondary-color: rgb(78, 78, 80,0.5);
+--background-theme-secondary-color-opaque: rgb(78, 78, 80,1);
 --background-theme-tertiary-color: whitesmoke;
 
 // font colors
@@ -28,6 +29,7 @@ body {
   background-color: var(--background-theme-color);
   color: var(--font-color-secondary);
   font-family: 'Nunito', sans-serif;
+
 };
 main{
   display: flex;
@@ -42,19 +44,24 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 height: 100vh;
-width: 100vw;
+width: 100%;
 margin: 0 auto;
 font-size: var(--button-font-size);
 background: url("../images/logo-background.png") repeat 0 0;
 background-size: cover;
 background-position: center;
 border-bottom: 2px solid white;
+color:var(--background-theme-color)
 }
-.main>h1{
-  margin-bottom:50%;
-  margin-top:-5%;
+
+.mainpage-title{
+  color:whitesmoke;
+  margin-top:40%;
+  margin-bottom:0%;
   font-family: 'Mr Dafoe', cursive;
-  font-size:90px;
+  font-size:200px;
+  text-shadow: 1px 1px 2px var(--background-theme-color), 0 0 1em var(--background-theme-color-2), 0 0 0.3em whitesmoke;
+  opacity: 0.9;
 }
 
 .sidebar{
@@ -66,7 +73,7 @@ border-bottom: 2px solid white;
   margin-left:10px;
   margin-right: 20px;
   font-size: 50px;
-  -webkit-text-stroke: 5% gray; 
+  -webkit-text-stroke: 5% gray;
   background:none;
   background-color:rgba(0, 0, 0, 0);
   border-right:2px solid whitesmoke;
@@ -80,16 +87,13 @@ border-bottom: 2px solid white;
   margin-left:7%;
   border-bottom: 5px solid whitesmoke;
 }
-p{
-  display: inherit;
-}
+
 button{
   background-color: whitesmoke;
   color:var(--background-theme-color);
   border: 3px solid var(--background-theme-secondary-color);
     box-shadow:0px 2px 5px 5px black ;
     width: auto;
-
 }
 
 
@@ -209,29 +213,66 @@ border:5px solid var(--background-theme-color);
   background-color: var(--background-theme-secondary-color);
   padding: 1%;
   border: 5px solid var(--background-theme-tertiary-color);
+  width: 55%;;
 }
 
  .menu-type {
   font-size: 50px;
   margin-bottom:-5%;
   text-align: center;
+  text-decoration:   overline;
+  text-decoration-color: var(--background-theme-color);
+}
+
+
+.menu_display{
+  display: grid;
+  grid-template-columns: 1fr 2fr 10px;
+  gap: 20px ;
+
+  align-items: center;
+
+}
+
+.menu_info{
+  width: 100%;
+}
+
+.menu-info-and-button{
+  display: flex;
+  flex-direction: row ;
 }
 .user { /* menu image */
-  border: 5px solid var(--background-theme-tertiary-color);
-  margin-left:10%;
+  border: 5px solid var(--background-theme-color);
+  justify-self: flex-start;
+  margin-right:10%;
+  margin-left: 0;
   margin-top:5%;
- 
+  width: 200px;
+
+
 }
 .item-name{
   font-size: var(--font-size-paragraph);
    text-decoration: underline;
 }
-
-.menu_change {
-  padding:3%;
-  display: flex;
-  flex-direction: row;
+.item-price{
+  font-size: var(--font-size-paragraph);
 }
+.menu_change {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding:3%;
+  margin-left: 5%;
+  margin-top:20%;
+  width:fit-content;
+  height: 20%;
+
+}
+
+
 
 .main-type{
   margin-top:15%;
@@ -273,18 +314,22 @@ border:5px solid var(--background-theme-color);
 }
 .about-snippet{
    width:100%;
-   height: 60%;
+   height: 75%;
   font-size: 20px;
   display: flex;
   flex-direction: column;
   justify-self: center;
   align-items: center;
   margin-top: 10%;
-  box-shadow:0px 0px 2px 5px whitesmoke inset;
    background-color: var(--background-theme-color);
 
   padding:2%
 }
+
+.about-snippet > form {
+  background: transparent;
+}
+
 
 h4{
 font-family: 'Mr Dafoe', cursive;
@@ -299,7 +344,7 @@ font-weight:bold ;
   width: 20%;
   height:100%;
   margin:2%;
-  
+
 }
 
 .counter-btn {
@@ -317,11 +362,37 @@ background-color: var(--background-theme-color);
 
 }
 
+.add-to-cart{
+  white-space: nowrap;
+  text-align: center;
+  background-color: rgb(254, 247, 49);
+  width:fit-content;
+  height: fit-content;
+margin-top:15%;
+margin-left: 5%;
+
+}
+
+.item_amount{
+  display: flex;
+  flex-direction: row;
+}
+
 .inc, .dec{
   margin-left:2%;
+  height: 30px;
 }
 .display{
   text-align: center;
   margin-left:1%;
   font-size: 17px;
+}
+.checkout-btn{
+  padding: 5px;
+  background-color: green ;
+}
+
+.checkout-form {
+  margin-top:15px;
+  margin-left:15px;
 }

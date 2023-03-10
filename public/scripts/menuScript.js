@@ -31,11 +31,13 @@ $(() => {
               <p class="item-name">${item.name}</p>
               <p class="item-description">${item.description}</p>
               <p class="item-price">$ ${(item.price / 100)}</p>
-            </div>
+            </div >
             <div class="menu_change">
+              <div class="item_amount">
               <input type="button" value="+" class="inc" onclick="incNumber(${item.id})"/>
               <label class="display" data-product-id="${item.id}">0</label>
               <input type="button" value="-" class="dec" onclick="decNumber(${item.id})"/>
+              </div>
               <button data-product-id="${item.id}" class="add-to-cart" type="button" class="btn btn-success">Add To Cart</button>
             </div>
           </div>
