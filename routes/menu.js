@@ -4,10 +4,10 @@ const router = express.Router();
 
 
 
-
+module.exports = (db) => {
 
   router.get("/", (req, res) => {         // non-AJAX route; returns full page of HTML
-   console.log("test")
+    console.log("test")
     res.render("menu");
   });
 
@@ -15,7 +15,7 @@ const router = express.Router();
     db.query(`SELECT * FROM menu_items;`)
       .then(data => {
         let templateVars = data.rows;
-        res.json( { templateVars})
+        res.json({ templateVars })
         //res.render('menu', templateVars)
       })
       .catch(err => {
@@ -26,6 +26,7 @@ const router = express.Router();
 
   })
 
-module.exports = router;
+  return router;
+}
 
 

@@ -2,11 +2,11 @@ const express = require('express');
 const router  = express.Router();
 
 
-
+module.exports = (db) => {
   const menuItems = {};
 
   router.post("/", (req, res) => {      // JSON-only route for AJAX POST
-  let selectedMenuItem = req.body;
+    let selectedMenuItem = req.body;
     const item_id = selectedMenuItem.item_id;
     menuItems[item_id] = {};
     menuItems[item_id].id = selectedMenuItem.item_id;
@@ -28,6 +28,5 @@ const router  = express.Router();
     res.json({ menuItems })
   })
 
- 
-
-module.exports = router;
+  return router 
+}
